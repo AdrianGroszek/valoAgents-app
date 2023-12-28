@@ -1,0 +1,30 @@
+@import '../variables';
+
+.card-item {
+	height: 60rem;
+	width: 40rem;
+	background-color: $bg-color-secondary;
+	transition: all 0.3s;
+
+	.card-item-img {
+		height: 20rem;
+		width: 100%;
+		background-size: cover;
+		background-position: center;
+	}
+
+	.card-item-header {
+		padding: 3rem;
+		font-size: $fz-big;
+		color: $white-opacity-60;
+	}
+
+	.card-item-text {
+		padding: 0 3rem;
+	}
+
+	&:hover {
+		transform: scale(1.01) translateY(-4px);
+		box-shadow: 0px 8px 12px 0px rgba($color: #000000, $alpha: 0.3);
+	}
+}

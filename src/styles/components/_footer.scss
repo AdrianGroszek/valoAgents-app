@@ -1,0 +1,11 @@
+@import '../variables';
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 3rem;
+	color: $white-opacity-60;
+	background-color: $bg-color-secondary;
+	font-size: 12px;
+}

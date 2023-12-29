@@ -9,9 +9,6 @@ function Home() {
 				<div className='logo-icon-big'></div>
 				<h2 className='logo-text'>ValoAgents</h2>
 				<Button type={'btn-white'}>START</Button>
-				<button className='down-arrow-btn'>
-					<i class='fi fi-bs-chevron-double-down'></i>
-				</button>
 			</div>
 			<div className='cards-box'>
 				<CardsList />

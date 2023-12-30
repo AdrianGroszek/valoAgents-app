@@ -1,0 +1,25 @@
+@import '../variables';
+
+.agent-item {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	&:not(:last-child) {
+		margin-bottom: 0.5rem;
+	}
+
+	.agent-profile-img-small {
+		width: 6.4rem;
+		height: 3.2rem;
+		margin-right: 1rem;
+
+		// temp style
+		background-color: $white;
+	}
+
+	.agent-name {
+		font-weight: 500;
+		text-transform: uppercase;
+	}
+}

@@ -19,6 +19,7 @@ html {
 body {
 	min-height: 100vh;
 	font-size: $fz-regular;
+	background-color: $bg-color-primary;
 }
 
 a:link,
@@ -28,18 +29,30 @@ a:active {
 	text-decoration: none;
 }
 
+ul {
+	list-style: none;
+}
+
+.text-red {
+	color: $red;
+}
+
+.text-grey {
+	color: $white-opacity-60;
+}
+
 ::-webkit-scrollbar {
 	width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-	background: $red;
-}
-
-::-webkit-scrollbar-thumb {
 	background: $bg-color-secondary;
 }
 
+::-webkit-scrollbar-thumb {
+	background: $red;
+}
+
 ::-webkit-scrollbar-thumb:hover {
-	background: #444;
+	background: $dark-red;
 }

@@ -1,0 +1,17 @@
+@import '../variables';
+
+.agents-list-card {
+	width: 30rem;
+	height: 60rem;
+	// background-color: $bg-color-secondary;
+	border-bottom: 2px solid $red;
+
+	.card-description {
+		font-size: $fz-super-large;
+	}
+
+	.agents-number-text {
+		font-size: $fz-small;
+		font-weight: bold;
+	}
+}

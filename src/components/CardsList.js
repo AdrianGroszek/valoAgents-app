@@ -24,9 +24,9 @@ const cardInfo = [
 function CardsList() {
 	return (
 		<div className='cards-list'>
-			<CardItem />
-			<CardItem />
-			<CardItem />
+			{cardInfo.map((card) => (
+				<CardItem image={card.logoImg} title={card.title} text={card.text} />
+			))}
 		</div>
 	);
 }

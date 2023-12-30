@@ -1,0 +1,24 @@
+@import '../variables';
+
+.logo-small-container {
+	display: flex;
+	align-items: center;
+
+	position: absolute;
+	top: 3rem;
+	left: 6rem;
+
+	.logo-icon-small {
+		height: 35px;
+		width: 35px;
+		background-image: url('../../assets/icons/logo-icon.png');
+		background-size: cover;
+		background-position: center;
+	}
+
+	.logo-icon-small-text {
+		margin-left: 0.5rem;
+		font-size: $fz-super-large;
+		font-weight: bold;
+	}
+}

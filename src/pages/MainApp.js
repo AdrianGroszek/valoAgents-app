@@ -1,47 +1,82 @@
 import LogoSmall from '../components/LogoSmall';
 import AgentsListCard from '../components/AgentsListCard';
+import AgentInfoCard from '../components/AgentInfoCard';
+import { useAgents } from '../useAgents';
+import { useState } from 'react';
 
 function MainApp() {
+	const { agents } = useAgents();
+	const [curAgent, setCurAgent] = useState({});
+	const [curAbility, setCurAbility] = useState({});
+	const [isActive, setIsActive] = useState(false);
+	// console.log(curAgent);
+
+	function handleAbilityClick(ability) {
+		setCurAbility({
+			name: ability.displayName,
+			description: ability.description,
+			icon: ability.displayIcon,
+		});
+		setIsActive(ability);
+	}
+
+	function handleAgentClick(agent) {
+		// Tworzenie nowego obiektu po kliknięciu
+		setCurAgent({
+			name: agent?.displayName,
+			role: agent?.role?.displayName,
+			description: agent?.description,
+			abilities: agent?.abilities,
+			image: agent?.fullPortrait,
+		});
+
+		if (agent.displayName !== curAgent.name) {
+			setCurAbility({});
+			setIsActive(false);
+		}
+	}
+
 	return (
 		<>
 			<LogoSmall />
 			<div className='wrapper'>
-				<AgentsListCard />
-				<div className='agent-info-card'>
-					<h3 className='card-description text-red'>Nazwa agenta</h3>
-					<div className='agent-role-header-box'>
-						<span className='text-small text-grey'>rola</span>
-						<span className='text-big text-grey'>Nazwa roli</span>
-					</div>
-					<ul className='skills-list'>
-						<li className='skill-item'>
-							<div className='temp-img'></div>
+				<AgentsListCard agents={agents} onSelectAgent={handleAgentClick} />
+				<AgentInfoCard
+					curAgent={curAgent}
+					curAbility={curAbility}
+					onAbilityClick={handleAbilityClick}
+					isActive={isActive}
+				/>
+				<div className='agent-img-card'>
+					{curAgent.image ? <img src={curAgent.image} alt='agent' /> : ''}
+				</div>
+			</div>
+
+			{/* <div>
+				<h1>Lista Agentów Valorant</h1>
+				<ul>
+					{agents.map((agent) => (
+						<li key={agent.uuid} onClick={() => handleAgentClick(agent)}>
+							{agent.displayName}
 						</li>
-						<li className='skill-item active-skill'>
-							<div className='temp-img active-img'></div>
-						</li>
-						<li className='skill-item'>
-							<div className='temp-img'></div>
-						</li>
-						<li className='skill-item'>
-							<div className='temp-img'></div>
-						</li>
-					</ul>
-					<div className='skill-description-box'>
-						<h3 className='skill-name'>Wingman</h3>
+					))}
+				</ul>
+
+				{curAgent && (
+					<div>
+						<h2>Wybrany Agent:</h2>
 						<p>
-							EQUIP Wingman. FIRE to send Wingman forward seeking enemies.
-							Wingman unleashes a concussive blast toward the first enemy he
-							sees. ALT FIRE when targeting a Spike site or planted Spike to
-							have Wingman defuse or plant the Spike. To plant, Gekko must have
-							the Spike in his inventory. When Wingman expires he reverts into a
-							dormant globule. INTERACT to reclaim the globule and gain another
-							Wingman charge after a short cooldown.
+							<strong>Imię:</strong> {curAgent.name}
+						</p>
+						<p>
+							<strong>Rola:</strong> {curAgent.role}
+						</p>
+						<p>
+							<strong>Opis:</strong> {curAgent.description}
 						</p>
 					</div>
-				</div>
-				<div className='agent-img-card'></div>
-			</div>
+				)}
+			</div> */}
 		</>
 	);
 }

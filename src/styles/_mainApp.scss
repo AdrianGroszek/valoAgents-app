@@ -8,97 +8,23 @@
 	height: calc(100vh - 3rem);
 	padding: 0 2rem;
 
-	.agent-info-card {
-		width: 65rem;
-		height: 60rem;
-		padding: 2rem 5rem;
-		background-color: $bg-color-secondary;
-
-		.card-description {
-			text-transform: uppercase;
-			font-size: $fz-super-large;
-			margin-bottom: 1rem;
-		}
-
-		.agent-role-header-box {
-			display: flex;
-			flex-direction: column;
-			text-transform: uppercase;
-			font-weight: 600;
-
-			.text-small {
-				font-size: $fz-small;
-			}
-
-			.text-big {
-				font-size: $fz-big;
-			}
-		}
-
-		.skills-list {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 1rem;
-			margin: 3rem 0;
-
-			.skill-item {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				width: 7.5rem;
-				height: 7.5rem;
-				border: 2px solid $white-opacity-60;
-				border-radius: 0.4rem;
-				transition: all 0.2s;
-				cursor: pointer;
-
-				&:hover {
-					background-color: $red;
-					border-color: $white;
-				}
-
-				&:hover .temp-img {
-					background-color: $white;
-				}
-
-				.temp-img {
-					height: 5rem;
-					width: 5rem;
-					background-color: $white-opacity-60;
-				}
-
-				.active-img {
-					background-color: $white;
-				}
-			}
-
-			.active-skill {
-				background-color: $red;
-				border-color: $white;
-			}
-		}
-
-		.skill-description-box {
-			display: flex;
-			flex-direction: column;
-			margin: 0 auto;
-			max-width: 40rem;
-
-			.skill-name {
-				margin-bottom: 0.5rem;
-				color: $red;
-				font-size: $fz-large;
-			}
-		}
-	}
-
 	.agent-img-card {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		width: 30rem;
 		height: 60rem;
-		background-image: url('https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png');
+		background-color: $bg-color-secondary;
+		// background-color: $red;
+		// background-image: url('https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png');
 		// background-image: url('https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/background.png');
-		background-size: cover;
-		background-position: center;
+		border-radius: 0.6rem;
+		overflow: hidden;
+
+		box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.15);
+
+		img {
+			height: 100%;
+		}
 	}
 }

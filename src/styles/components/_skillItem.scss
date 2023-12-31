@@ -1,0 +1,28 @@
+@import '../variables';
+
+.skill-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 7.5rem;
+	height: 7.5rem;
+	border: 2px solid $white-opacity-60;
+	border-radius: 0.4rem;
+	transition: all 0.2s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $red;
+		border-color: $white;
+	}
+
+	.temp-img {
+		height: 5rem;
+		width: 5rem;
+	}
+
+	&.active-img {
+		background-color: $red;
+		border-color: $white;
+	}
+}

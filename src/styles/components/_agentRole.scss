@@ -1,0 +1,22 @@
+@import '../variables';
+
+.card-description {
+	text-transform: uppercase;
+	font-size: $fz-super-large;
+	margin-bottom: 1rem;
+}
+
+.agent-role-header-box {
+	display: flex;
+	flex-direction: column;
+	text-transform: uppercase;
+	font-weight: 600;
+
+	.text-small {
+		font-size: $fz-small;
+	}
+
+	.text-big {
+		font-size: $fz-big;
+	}
+}

@@ -1,13 +1,13 @@
 import AgentsList from './AgentsList';
 
-function AgentsListCard() {
+function AgentsListCard({ agents, onSelectAgent }) {
 	return (
 		<div className='agents-list-card'>
 			<h3 className='card-description text-red'>Agenci</h3>
 			<p className='agents-number-text text-grey'>
-				Liczba agentów <span>23</span>
+				Liczba agentów <span>{agents.length}</span>
 			</p>
-			<AgentsList />
+			<AgentsList agents={agents} onSelectAgent={onSelectAgent} />
 		</div>
 	);
 }

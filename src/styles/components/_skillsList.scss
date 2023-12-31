@@ -1,0 +1,14 @@
+@import '../variables';
+
+.skills-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin: 3rem 0;
+
+	.active-skill {
+		background-color: $red;
+		border-color: $white;
+	}
+}

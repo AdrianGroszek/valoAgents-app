@@ -1,0 +1,14 @@
+@import '../variables';
+
+.skill-description-box {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	max-width: 40rem;
+
+	.skill-name {
+		margin-bottom: 0.5rem;
+		color: $red;
+		font-size: $fz-large;
+	}
+}

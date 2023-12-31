@@ -9,13 +9,13 @@
 	padding: 0 2rem;
 
 	.agent-img-card {
+		position: relative;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 30rem;
 		height: 60rem;
 		background-color: $bg-color-secondary;
-		// background-color: $red;
 		// background-image: url('https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/fullportrait.png');
 		// background-image: url('https://media.valorant-api.com/agents/e370fa57-4757-3604-3648-499e1f642d3f/background.png');
 		border-radius: 0.6rem;
@@ -23,8 +23,19 @@
 
 		box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.15);
 
+		z-index: -2;
+
+		&.card-red {
+			background-color: $red;
+		}
+
 		img {
 			height: 100%;
+		}
+
+		.agent-background-img {
+			position: absolute;
+			z-index: -1;
 		}
 	}
 }

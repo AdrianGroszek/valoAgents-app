@@ -1,6 +1,8 @@
-function AgentItem({ agent, onSelectAgent }) {
+function AgentItem({ agent, onSelectAgent, activeAgent }) {
 	return (
-		<li className={`agent-item`} onClick={() => onSelectAgent(agent)}>
+		<li
+			className={`agent-item ${activeAgent ? 'active' : ''}`}
+			onClick={() => onSelectAgent(agent)}>
 			<img
 				className='agent-profile-img-small'
 				src={agent.killfeedPortrait}

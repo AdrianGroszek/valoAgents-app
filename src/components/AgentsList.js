@@ -1,6 +1,6 @@
 import AgentItem from './AgentItem';
 
-function AgentList({ agents, onSelectAgent }) {
+function AgentList({ agents, onSelectAgent, activeAgent }) {
 	return (
 		<ul className='agents-list'>
 			{agents.map((agent) => (
@@ -8,6 +8,7 @@ function AgentList({ agents, onSelectAgent }) {
 					agent={agent}
 					key={agent.uuid}
 					onSelectAgent={onSelectAgent}
+					activeAgent={activeAgent === agent}
 				/>
 			))}
 		</ul>

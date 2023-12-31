@@ -1,4 +1,6 @@
 function SkillItem({ onAbilityClick, ability, isActive }) {
+	console.log(isActive);
+	console.log(ability);
 	return (
 		<li
 			className={`skill-item ${isActive ? 'active-img' : ''}`}

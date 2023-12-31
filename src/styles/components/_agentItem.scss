@@ -6,11 +6,11 @@
 	cursor: pointer;
 
 	&.active {
-		background-color: $bg-color-secondary;
+		background-color: $red;
 	}
 
 	&:hover {
-		background-color: $bg-color-secondary;
+		background-color: $red;
 	}
 
 	&:not(:last-child) {

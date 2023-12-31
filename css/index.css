@@ -108,7 +108,6 @@ ul {
 }
 
 .wrapper {
-  height: calc(100vh - 3rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,28 +118,29 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
-}
-.wrapper .agents-list-card {
-  width: 30rem;
-  height: 60rem;
-  border-bottom: 2px solid #ff4656;
-}
-.wrapper .agents-list-card .card-description {
-  font-size: 2.4rem;
-}
-.wrapper .agents-list-card .agents-number-text {
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-.wrapper .agent-info-card {
-  width: 65rem;
-  height: 60rem;
-  background-color: #292e32;
+  height: calc(100vh - 3rem);
+  padding: 0 2rem;
 }
 .wrapper .agent-img-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 30rem;
   height: 60rem;
   background-color: #292e32;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.15);
+}
+.wrapper .agent-img-card img {
+  height: 100%;
 }
 
 .btn {
@@ -263,14 +263,19 @@ footer {
           align-items: center;
   cursor: pointer;
 }
+.agent-item.active {
+  background-color: #292e32;
+}
+.agent-item:hover {
+  background-color: #292e32;
+}
 .agent-item:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 .agent-item .agent-profile-img-small {
-  width: 6.4rem;
-  height: 3.2rem;
+  width: 8rem;
+  height: 4rem;
   margin-right: 1rem;
-  background-color: #eee;
 }
 .agent-item .agent-name {
   font-weight: 500;
@@ -281,4 +286,122 @@ footer {
   height: 51rem;
   margin-top: 3rem;
   overflow-y: scroll;
+}
+
+.agents-list-card {
+  width: 30rem;
+  height: 60rem;
+  border-bottom: 2px solid #ff4656;
+}
+.agents-list-card .card-description {
+  font-size: 2.4rem;
+}
+.agents-list-card .agents-number-text {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.skill-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 7.5rem;
+  height: 7.5rem;
+  border: 2px solid rgba(170, 170, 170, 0.6);
+  border-radius: 0.4rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.skill-item:hover {
+  background-color: #ff4656;
+  border-color: #eee;
+}
+.skill-item .temp-img {
+  height: 5rem;
+  width: 5rem;
+}
+.skill-item.active-img {
+  background-color: #ff4656;
+  border-color: #eee;
+}
+
+.skills-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin: 3rem 0;
+}
+.skills-list .active-skill {
+  background-color: #ff4656;
+  border-color: #eee;
+}
+
+.skill-description-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  max-width: 40rem;
+}
+.skill-description-box .skill-name {
+  margin-bottom: 0.5rem;
+  color: #ff4656;
+  font-size: 2rem;
+}
+
+.card-description {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+}
+
+.agent-role-header-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.agent-role-header-box .text-small {
+  font-size: 1.4rem;
+}
+.agent-role-header-box .text-big {
+  font-size: 1.8rem;
+}
+
+.agent-info-card {
+  width: 65rem;
+  height: 60rem;
+  padding: 2rem 5rem;
+  background-color: #292e32;
+  border-radius: 0.6rem;
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.15);
+}
+.agent-info-card .choose-agent-big {
+  color: rgba(170, 170, 170, 0.6);
+  text-align: center;
+  font-size: 4rem;
 }/*# sourceMappingURL=index.css.map */

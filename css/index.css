@@ -122,6 +122,7 @@ ul {
   padding: 0 2rem;
 }
 .wrapper .agent-img-card {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,9 +139,17 @@ ul {
   overflow: hidden;
   -webkit-box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.15);
+  z-index: -2;
+}
+.wrapper .agent-img-card.card-red {
+  background-color: #ff4656;
 }
 .wrapper .agent-img-card img {
   height: 100%;
+}
+.wrapper .agent-img-card .agent-background-img {
+  position: absolute;
+  z-index: -1;
 }
 
 .btn {
@@ -237,6 +246,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #eee;
   position: absolute;
   top: 3rem;
   left: 6rem;
@@ -264,10 +274,10 @@ footer {
   cursor: pointer;
 }
 .agent-item.active {
-  background-color: #292e32;
+  background-color: #ff4656;
 }
 .agent-item:hover {
-  background-color: #292e32;
+  background-color: #ff4656;
 }
 .agent-item:not(:last-child) {
   margin-bottom: 0.5rem;
@@ -291,7 +301,7 @@ footer {
 .agents-list-card {
   width: 30rem;
   height: 60rem;
-  border-bottom: 2px solid #ff4656;
+  border-bottom: 3px solid #292e32;
 }
 .agents-list-card .card-description {
   font-size: 2.4rem;

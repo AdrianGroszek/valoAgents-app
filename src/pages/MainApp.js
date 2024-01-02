@@ -4,7 +4,7 @@ import LogoSmall from '../components/LogoSmall';
 import AgentsListCard from '../components/AgentsListCard';
 import AgentInfoCard from '../components/AgentInfoCard';
 import { useAgents } from '../useAgents';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function MainApp() {
 	const [curAgent, setCurAgent] = useState({});

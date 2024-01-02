@@ -8,15 +8,37 @@
 
 .agent-role-header-box {
 	display: flex;
-	flex-direction: column;
+	align-items: center;
 	text-transform: uppercase;
 	font-weight: 600;
 
-	.text-small {
-		font-size: $fz-small;
+	.agent-role-text-wrapper {
+		display: flex;
+		flex-direction: column;
+
+		.text-small {
+			font-size: $fz-small;
+		}
+
+		.text-big {
+			font-size: $fz-big;
+		}
 	}
 
-	.text-big {
-		font-size: $fz-big;
+	.role-icon,
+	.fake-role-icon {
+		width: 3.5rem;
+		height: 3.5rem;
+		margin-right: 1rem;
+	}
+
+	.color-grey {
+		filter: invert(60%);
+	}
+
+	.fake-role-icon {
+		border-radius: 50px;
+		border: 3px solid $white-opacity-60;
+		// background-color: $white-opacity-60;
 	}
 }

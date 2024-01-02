@@ -7,11 +7,19 @@ import { useAgents } from '../useAgents';
 import { useState } from 'react';
 
 function MainApp() {
-	const { agents } = useAgents();
 	const [curAgent, setCurAgent] = useState({});
 	const [curAbility, setCurAbility] = useState({});
 	const [isActive, setIsActive] = useState(null);
 	const [activeAgent, setActiveAgent] = useState(null);
+	const [isDescription, setIsDescription] = useState(false);
+
+	const { agents } = useAgents();
+
+	function handleShowDescription() {
+		setIsDescription(!isDescription);
+	}
+
+	// console.log(agents);
 
 	function handleAbilityClick(ability) {
 		setCurAbility({
@@ -24,6 +32,9 @@ function MainApp() {
 
 	function handleAgentClick(agent) {
 		if (agent.displayName === curAgent.name) return;
+		// console.log(agent.abilities[0]);
+		// console.log(curAbility);
+		// console.log(isActive);
 
 		setCurAgent({
 			name: agent?.displayName,
@@ -31,14 +42,13 @@ function MainApp() {
 			description: agent?.description,
 			abilities: agent?.abilities,
 			image: agent?.fullPortrait,
+			roleImage: agent?.role?.displayIcon,
 			background: agent?.background,
+			roleDescription: agent?.role?.description,
 		});
 		setActiveAgent(agent);
-
-		if (agent.displayName !== curAgent.name) {
-			setCurAbility({});
-			setIsActive(false);
-		}
+		handleAbilityClick(agent.abilities[0]);
+		setIsDescription(false);
 	}
 
 	return (
@@ -57,6 +67,8 @@ function MainApp() {
 					curAbility={curAbility}
 					onAbilityClick={handleAbilityClick}
 					isActive={isActive}
+					onShowDescription={handleShowDescription}
+					isDescription={isDescription}
 				/>
 				<div className={`agent-img-card ${activeAgent ? 'card-red' : ''}`}>
 					{curAgent.image ? (

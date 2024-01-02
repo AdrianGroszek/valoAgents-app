@@ -4,8 +4,9 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	// flex-direction: column;
 	gap: 2rem;
-	height: calc(100vh - 3rem);
+	min-height: calc(100vh - 3rem);
 	padding: 0 2rem;
 
 	.agent-img-card {

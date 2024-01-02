@@ -25,7 +25,12 @@ function CardsList() {
 	return (
 		<div className='cards-list'>
 			{cardInfo.map((card) => (
-				<CardItem image={card.logoImg} title={card.title} text={card.text} />
+				<CardItem
+					image={card.logoImg}
+					title={card.title}
+					text={card.text}
+					key={card.title}
+				/>
 			))}
 		</div>
 	);

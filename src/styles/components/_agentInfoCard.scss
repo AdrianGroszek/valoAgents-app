@@ -1,6 +1,7 @@
 @import '../variables';
 
 .agent-info-card {
+	position: relative;
 	width: 65rem;
 	height: 60rem;
 	padding: 2rem 5rem;
@@ -9,8 +10,32 @@
 	box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.15);
 
 	.choose-agent-big {
+		position: relative;
+		top: 20rem;
 		color: $white-opacity-60;
 		text-align: center;
 		font-size: 4rem;
+	}
+
+	button {
+		position: absolute;
+		bottom: 1rem;
+		right: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 3rem;
+		width: 3rem;
+		background: none;
+		color: $red;
+		font-size: 3rem;
+		border: none;
+		border-radius: 50px;
+		cursor: pointer;
+		transition: all 0.2s;
+
+		&:hover {
+			background-color: $bg-color-primary;
+		}
 	}
 }

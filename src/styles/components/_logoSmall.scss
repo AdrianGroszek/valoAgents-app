@@ -3,10 +3,10 @@
 .logo-small-container {
 	display: flex;
 	align-items: center;
-	color: $white;
+	color: $white-opacity-60;
 	position: absolute;
-	top: 3rem;
-	left: 6rem;
+	top: 1.5rem;
+	left: 3rem;
 
 	.logo-icon-small {
 		height: 35px;
@@ -14,6 +14,7 @@
 		background-image: url('../../assets/icons/logo-icon.png');
 		background-size: cover;
 		background-position: center;
+		filter: invert(50%);
 	}
 
 	.logo-icon-small-text {

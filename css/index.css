@@ -118,7 +118,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
-  height: calc(100vh - 3rem);
+  min-height: calc(100vh - 3rem);
   padding: 0 2rem;
 }
 .wrapper .agent-img-card {
@@ -220,7 +220,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   gap: 2rem;
-  margin-bottom: 7rem;
+  margin-bottom: 3rem;
 }
 
 footer {
@@ -246,10 +246,10 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #eee;
+  color: rgba(170, 170, 170, 0.6);
   position: absolute;
-  top: 3rem;
-  left: 6rem;
+  top: 1.5rem;
+  left: 3rem;
 }
 .logo-small-container .logo-icon-small {
   height: 35px;
@@ -257,6 +257,8 @@ footer {
   background-image: url("../../assets/icons/logo-icon.png");
   background-size: cover;
   background-position: center;
+  -webkit-filter: invert(50%);
+          filter: invert(50%);
 }
 .logo-small-container .logo-icon-small-text {
   margin-left: 0.5rem;
@@ -273,10 +275,7 @@ footer {
           align-items: center;
   cursor: pointer;
 }
-.agent-item.active {
-  background-color: #ff4656;
-}
-.agent-item:hover {
+.agent-item.active, .agent-item:hover {
   background-color: #ff4656;
 }
 .agent-item:not(:last-child) {
@@ -387,21 +386,44 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.agent-role-header-box .agent-role-text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-transform: uppercase;
-  font-weight: 600;
 }
-.agent-role-header-box .text-small {
+.agent-role-header-box .agent-role-text-wrapper .text-small {
   font-size: 1.4rem;
 }
-.agent-role-header-box .text-big {
+.agent-role-header-box .agent-role-text-wrapper .text-big {
   font-size: 1.8rem;
+}
+.agent-role-header-box .role-icon,
+.agent-role-header-box .fake-role-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 1rem;
+}
+.agent-role-header-box .color-grey {
+  -webkit-filter: invert(60%);
+          filter: invert(60%);
+}
+.agent-role-header-box .fake-role-icon {
+  border-radius: 50px;
+  border: 3px solid rgba(170, 170, 170, 0.6);
 }
 
 .agent-info-card {
+  position: relative;
   width: 65rem;
   height: 60rem;
   padding: 2rem 5rem;
@@ -411,7 +433,48 @@ footer {
           box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.15);
 }
 .agent-info-card .choose-agent-big {
+  position: relative;
+  top: 20rem;
   color: rgba(170, 170, 170, 0.6);
   text-align: center;
   font-size: 4rem;
+}
+.agent-info-card button {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3rem;
+  width: 3rem;
+  background: none;
+  color: #ff4656;
+  font-size: 3rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.agent-info-card button:hover {
+  background-color: #212529;
+}
+
+.agent-description-box {
+  margin: 4rem auto 1rem;
+  max-width: 40rem;
+}
+.agent-description-box .agent-description-header {
+  margin-bottom: 1rem;
+  color: #ff4656;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
 }/*# sourceMappingURL=index.css.map */

@@ -37,6 +37,21 @@
 		.agent-background-img {
 			position: absolute;
 			z-index: -1;
+			transform: translateX(-2.5px);
+			transition: all 1s;
+		}
+
+		.animation-one {
+			transform: translateX(2.5px);
+		}
+
+		.agent-img {
+			transform: translateX(5px);
+			transition: all 1s;
+		}
+
+		.animation-two {
+			transform: translateX(-5px);
 		}
 	}
 }

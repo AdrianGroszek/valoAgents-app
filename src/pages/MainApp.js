@@ -4,7 +4,7 @@ import LogoSmall from '../components/LogoSmall';
 import AgentsListCard from '../components/AgentsListCard';
 import AgentInfoCard from '../components/AgentInfoCard';
 import { useAgents } from '../useAgents';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function MainApp() {
 	const [curAgent, setCurAgent] = useState({});
@@ -12,6 +12,7 @@ function MainApp() {
 	const [isActive, setIsActive] = useState(null);
 	const [activeAgent, setActiveAgent] = useState(null);
 	const [isDescription, setIsDescription] = useState(false);
+	const [isAnimated, setIsAnimated] = useState(false);
 
 	const { agents } = useAgents();
 
@@ -37,6 +38,7 @@ function MainApp() {
 		// console.log(isActive);
 
 		setCurAgent({
+			id: agent?.uuid,
 			name: agent?.displayName,
 			role: agent?.role?.displayName,
 			description: agent?.description,
@@ -49,6 +51,7 @@ function MainApp() {
 		setActiveAgent(agent);
 		handleAbilityClick(agent.abilities[0]);
 		setIsDescription(false);
+		setIsAnimated(!isAnimated);
 	}
 
 	return (
@@ -76,9 +79,15 @@ function MainApp() {
 							<img
 								src={curAgent.background}
 								alt='agent background'
-								className='agent-background-img'
+								className={`agent-background-img ${
+									isAnimated ? 'animation-one' : ''
+								}`}
 							/>
-							<img src={curAgent.image} alt='agent' />
+							<img
+								src={curAgent.image}
+								alt='agent'
+								className={`agent-img ${isAnimated ? 'animation-two' : ''}`}
+							/>
 						</>
 					) : (
 						''

@@ -150,6 +150,24 @@ ul {
 .wrapper .agent-img-card .agent-background-img {
   position: absolute;
   z-index: -1;
+  -webkit-transform: translateX(-2.5px);
+          transform: translateX(-2.5px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.wrapper .agent-img-card .animation-one {
+  -webkit-transform: translateX(2.5px);
+          transform: translateX(2.5px);
+}
+.wrapper .agent-img-card .agent-img {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.wrapper .agent-img-card .animation-two {
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
 }
 
 .btn {

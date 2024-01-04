@@ -83,10 +83,21 @@ ul {
   background-size: cover;
   background-position: center;
 }
+@media only screen and (max-width: 992px) {
+  .hero-bg-box .logo-icon-big {
+    height: 100px;
+    width: 100px;
+  }
+}
 .hero-bg-box .logo-text {
   margin-top: 1.5rem;
   margin-bottom: 4rem;
   font-size: 7.2rem;
+}
+@media only screen and (max-width: 992px) {
+  .hero-bg-box .logo-text {
+    font-size: 4.8rem;
+  }
 }
 
 .cards-box {
@@ -103,8 +114,13 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: calc(100vh - 3rem);
+  min-height: calc(100vh - 3rem);
   background-color: #212529;
+}
+@media only screen and (max-width: 992px) {
+  .cards-box .btn-red {
+    margin-bottom: 3rem;
+  }
 }
 
 .wrapper {
@@ -141,6 +157,11 @@ ul {
           box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.15);
   z-index: -2;
 }
+@media only screen and (max-width: 992px) {
+  .wrapper .agent-img-card {
+    display: none;
+  }
+}
 .wrapper .agent-img-card.card-red {
   background-color: #ff4656;
 }
@@ -168,6 +189,22 @@ ul {
 .wrapper .agent-img-card .animation-two {
   -webkit-transform: translateX(-5px);
           transform: translateX(-5px);
+}
+@media only screen and (max-width: 992px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    gap: 1rem;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
 }
 
 .btn {
@@ -249,6 +286,15 @@ ul {
   gap: 2rem;
   margin-bottom: 3rem;
 }
+@media only screen and (max-width: 992px) {
+  .cards-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 6rem;
+  }
+}
 
 footer {
   display: -webkit-box;
@@ -292,6 +338,11 @@ footer {
   font-size: 2.4rem;
   font-weight: bold;
 }
+@media only screen and (max-width: 992px) {
+  .logo-small-container {
+    display: none;
+  }
+}
 
 .agent-item {
   display: -webkit-box;
@@ -308,20 +359,63 @@ footer {
 .agent-item:not(:last-child) {
   margin-bottom: 0.5rem;
 }
+@media only screen and (max-width: 992px) {
+  .agent-item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 0.5rem;
+  }
+}
 .agent-item .agent-profile-img-small {
   width: 8rem;
   height: 4rem;
   margin-right: 1rem;
 }
+@media only screen and (max-width: 992px) {
+  .agent-item .agent-profile-img-small {
+    margin-right: 0;
+    width: 6rem;
+    height: 3rem;
+  }
+}
 .agent-item .agent-name {
   font-weight: 500;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 992px) {
+  .agent-item .agent-name {
+    margin-right: 1rem;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .agent-item {
+    height: 4rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .agent-item {
+    height: 3rem;
+  }
 }
 
 .agents-list {
   height: 51rem;
   margin-top: 3rem;
   overflow-y: scroll;
+}
+@media only screen and (max-width: 992px) {
+  .agents-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 4.6rem;
+    overflow-y: hidden;
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .agents-list {
+    height: 3.6rem;
+  }
 }
 
 .agents-list-card {
@@ -332,9 +426,31 @@ footer {
 .agents-list-card .card-description {
   font-size: 2.4rem;
 }
+@media only screen and (max-width: 992px) {
+  .agents-list-card .card-description {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+  }
+}
 .agents-list-card .agents-number-text {
   font-size: 1.4rem;
   font-weight: bold;
+}
+@media only screen and (max-width: 992px) {
+  .agents-list-card {
+    height: 100%;
+    border: none;
+    width: 65rem;
+  }
+  .agents-list-card ::-webkit-scrollbar {
+    height: 3px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .agents-list-card {
+    width: 100%;
+    margin-top: 2rem;
+  }
 }
 
 .skill-item {
@@ -363,9 +479,21 @@ footer {
   height: 5rem;
   width: 5rem;
 }
+@media only screen and (max-width: 768px) {
+  .skill-item .temp-img {
+    height: 4rem;
+    width: 4rem;
+  }
+}
 .skill-item.active-img {
   background-color: #ff4656;
   border-color: #eee;
+}
+@media only screen and (max-width: 768px) {
+  .skill-item {
+    height: 5rem;
+    width: 5rem;
+  }
 }
 
 .skills-list {
@@ -384,6 +512,12 @@ footer {
 .skills-list .active-skill {
   background-color: #ff4656;
   border-color: #eee;
+}
+@media only screen and (max-width: 768px) {
+  .skills-list {
+    gap: 0.5rem;
+    margin: 2rem 0;
+  }
 }
 
 .skill-description-box {
@@ -407,6 +541,11 @@ footer {
   text-transform: uppercase;
   font-size: 2.4rem;
   margin-bottom: 1rem;
+}
+@media only screen and (max-width: 768px) {
+  .card-description {
+    font-size: 1.8rem;
+  }
 }
 
 .agent-role-header-box {
@@ -433,6 +572,11 @@ footer {
 }
 .agent-role-header-box .agent-role-text-wrapper .text-big {
   font-size: 1.8rem;
+}
+@media only screen and (max-width: 768px) {
+  .agent-role-header-box .agent-role-text-wrapper .text-big {
+    font-size: 1.6rem;
+  }
 }
 .agent-role-header-box .role-icon,
 .agent-role-header-box .fake-role-icon {
@@ -492,6 +636,14 @@ footer {
 }
 .agent-info-card button:hover {
   background-color: #212529;
+}
+@media only screen and (max-width: 768px) {
+  .agent-info-card {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
 }
 
 .agent-description-box {

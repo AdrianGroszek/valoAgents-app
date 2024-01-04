@@ -4,4 +4,15 @@
 	height: 51rem;
 	margin-top: 3rem;
 	overflow-y: scroll;
+
+	@media only screen and (max-width: 992px) {
+		display: flex;
+		height: 4.6rem;
+		overflow-y: hidden;
+		margin-top: 0;
+	}
+
+	@media only screen and (max-width: 768px) {
+		height: 3.6rem;
+	}
 }

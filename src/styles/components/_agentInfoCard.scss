@@ -38,4 +38,11 @@
 			background-color: $bg-color-primary;
 		}
 	}
+
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+		padding: 1rem 2rem;
+		font-size: $fz-small;
+		margin-bottom: 1rem;
+	}
 }

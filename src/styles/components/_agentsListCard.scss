@@ -9,10 +9,29 @@
 
 	.card-description {
 		font-size: $fz-super-large;
+
+		@media only screen and (max-width: 992px) {
+			font-size: $fz-big;
+			margin-bottom: 0;
+		}
 	}
 
 	.agents-number-text {
 		font-size: $fz-small;
 		font-weight: bold;
+	}
+
+	@media only screen and (max-width: 992px) {
+		height: 100%;
+		border: none;
+		width: 65rem;
+		::-webkit-scrollbar {
+			height: 3px;
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		width: 100%;
+		margin-top: 2rem;
 	}
 }

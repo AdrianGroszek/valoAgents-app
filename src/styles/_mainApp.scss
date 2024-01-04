@@ -26,6 +26,10 @@
 
 		z-index: -2;
 
+		@media only screen and (max-width: 992px) {
+			display: none;
+		}
+
 		&.card-red {
 			background-color: $red;
 		}
@@ -53,5 +57,14 @@
 		.animation-two {
 			transform: translateX(-5px);
 		}
+	}
+
+	@media only screen and (max-width: 992px) {
+		flex-direction: column;
+	}
+
+	@media only screen and (max-width: 768px) {
+		gap: 1rem;
+		justify-content: start;
 	}
 }

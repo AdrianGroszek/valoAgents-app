@@ -19,10 +19,20 @@
 	.temp-img {
 		height: 5rem;
 		width: 5rem;
+
+		@media only screen and (max-width: 768px) {
+			height: 4rem;
+			width: 4rem;
+		}
 	}
 
 	&.active-img {
 		background-color: $red;
 		border-color: $white;
+	}
+
+	@media only screen and (max-width: 768px) {
+		height: 5rem;
+		width: 5rem;
 	}
 }
